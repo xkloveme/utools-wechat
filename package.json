@@ -2,11 +2,12 @@
   "name": "utools-wechat",
   "version": "1.0.4",
   "description": "微信自动回复",
-  "main": "bot.js",
+  "main": "src/bot.js",
   "scripts": {
-    "dev": "node bot.js",
-    "build:all": "pkg -t node12-win-x64,node12-linux-x64,node12-macos-x64 bot.js --out-path=build/",
-    "build": "pkg -t node12-win-x64,node12-linux-x64,node12-macos-x64 test.js --out-path=build/",
+    "dev": "node src/bot.js",
+    "lib": "ncc build src/bot.js  -o lib",
+    "build:all": "pkg -t node12-win-x64,node12-linux-x64,node12-macos-x64 lib/index.js --out-path=build/",
+    "build": "pkg -t node12-win-x64,node12-linux-x64,node12-macos-x64 lib/index.js --out-path=build/",
     "build:mac": "pkg -t node12-macos-x64 bot.js --out-path=build/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "patch": "npm version patch && git push origin main && git push origin --tags",
@@ -18,5 +19,8 @@
   "dependencies": {
     "pkg": "^5.8.1",
     "wechaty": "^1.20.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
   }
 }

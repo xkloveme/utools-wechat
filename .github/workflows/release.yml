@@ -29,6 +29,7 @@ jobs:
       - name: Build Resoure file
         run: |
           pnpm install
+          pnpm lib
           pnpm run build
       - name: upload artifacts
         uses: actions/upload-artifact@v3
