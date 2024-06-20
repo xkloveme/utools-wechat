@@ -3,6 +3,9 @@ name: Release
 on:
   push:
     branches: [main]
+  # 添加标签推送触发器
+  tags:
+    - 'v*.*.*'
 
 
 jobs:
