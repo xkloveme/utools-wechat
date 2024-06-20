@@ -2,10 +2,9 @@ name: Release
 
 on:
   push:
-    branches: [main]
-  # 添加标签推送触发器
-  tags:
-    - 'v*.*.*'
+    tags:
+      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
+
 
 
 jobs:
