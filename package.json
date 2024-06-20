@@ -1,0 +1,17 @@
+{
+  "name": "utools-wechat",
+  "version": "1.0.0",
+  "description": "微信自动回复",
+  "main": "bot.js",
+  "scripts": {
+    "dev": "node bot.js",
+    "build": "pkg -t node12-win-x64,node12-linux-x64,node12-macos-x64 bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kk",
+  "license": "ISC",
+  "dependencies": {
+    "pkg": "^5.8.1",
+    "wechaty": "^1.20.2"
+  }
+}
