@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "node bot.js",
     "build": "pkg -t node12-win-x64,node12-linux-x64,node12-macos-x64 bot.js --out-path=build/",
+    "build:mac": "pkg -t node12-macos-x64 bot.js --out-path=build/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "patch": "npm version patch && git push origin main && git push origin --tags",
     "minor": "npm version minor && git push origin main && git push origin --tags",
     "major": "npm version major && git push origin main && git push origin --tags"
   },
-  "author": "kk",
+  "author": "xkloveme",
   "license": "ISC",
   "dependencies": {
     "pkg": "^5.8.1",
