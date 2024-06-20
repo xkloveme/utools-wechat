@@ -40,10 +40,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            build/*.exe
-            build/*.dmg
-            build/*.AppImage
-            build/*.deb
-            build/*.zip
+            build/*
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
